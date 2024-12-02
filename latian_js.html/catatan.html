@@ -1,0 +1,298 @@
+<!-- {
+Compiler 
+  Compiler (kompilator) adalah sebuah program komputer yang berguna untuk menerjemahkan program komputer 
+  yang ditulis dalam bahasa pemrograman tertentu menjadi program yang ditulis dalam bahasa pemrograman lain.
+Interpreter
+  penerjemah atau lebih dikenal dengan interpreter merupakan perangkat lunak yang berfungsi melakukan eksekusi 
+  sejumlah proses yang ditulis dalam suatu bahasa pemrograman tanpa terlebih dahulu menyusunnya menjadi program 
+  bahasa mesin.
+    Sumber:
+    https://medium.com/@larasn_/mengenal-compiler-dan-interpreter-30610c6df554
+    https://youtu.be/gCBysZKiU3Y?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w
+    
+Bahasa pemrograman 
+  Bahasa pemrograman di bedakan menjadi 2 yaitu; Bahasa manusia (bahasa tingkat tinggi/high level languange) contoh:
+  javascript,actionscript,ruby dan bahasa mesin (bahasa tingkat rendah/low level languange) contoh : bahasa assembly,c,c++.
+  javacript itu untuk aplikasi web, type javascript itu untype/dynamically typed yaitu bisa diisi oleh type data yg berbeda,
+  seperti bisa diisi dengan angka atau huruf.
+    Sumber:
+  https://youtu.be/6UhT1lmV9DE?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w
+
+Type Data
+  data dalam laptop itu dapat dimodifikasi,membuat,disimpan dan menghapusnya, Data tersimpan dalam serangkaian BIT.
+  BIT/Binary Digit Adalah Satuan Data Terkecil yg ada di dalam komputer, BIT itu nilainya hanya 0/1.
+  digit 1 itu terjadi ketika salah satu komponen dialiri oleh listrik,BIT tersebut dibagi kedalam beberapa potongan,
+  potongan" tersebut masuk kedalam nilai/value,setiap value memiliki peran yang berbeda" sekumpulan value disebut type data.
+  ada 6 type data yaitu, *number,string,boolean,object,fuction,undefined.
+    Sumber:
+  https://youtu.be/1FAnrYu7LCM?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w
+
+Type Data: Angka
+  di dalam javascript tidak ada integer/bilangan bulat yg ada hanya floating point,ukuran angka yg dapat ditampung pada
+  javascript adalah 64 BIT. contoh angka" yg dapat disimpan pada javascript adalah  *angka tanpa desimal/integer (tidak bisa 15 digit),
+  angka tanpa desimal/pecahan (koma diganti dengan titik,max 17 digit dibelakang koma),eksponen,bilangan negatif.
+  jangan pernah mengawali angka javascript dengan 0 karna kurang akurat , angka" spesial dalam javascript adalah
+  Infinity,-Infinity,NaN (Not a Number )
+    Sumber
+  https://youtu.be/oPlEq7fewIg?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w 
+
+}
+
+{
+FUNCTION
+   -sub program untuk yg dapat di panggil di bagian lain dari program
+   -merupakan struktur dasar pembentukan js
+   -disebut juga sebagai prosedur (kumpulan statement untuk melakukan tugas atau menghitung sebuah nilai)
+   -untuk dapat menggunakannya, kita harus membuat terlebih daulu function tersebut, lalu memanggilnya
+   -ternasuk dalam first class object
+KELEBIHAN FUNCTION
+   -reusabiliyty (DRY: Do Not Repeat yourself/ hanya dengan menuliskan satu kali dapat digunakan berkali")
+   -dekomposisi/abtraksi
+   -modularitas 
+KATEGORI FUNCTION
+  -built-in function
+    -fungsi yg sudah disediakan/ dibuat oleh js
+    -kita tinggal memanggilnya saja
+    -contoh:
+      >alert()
+      >confirm()
+      >prompt()
+    -contoh built-in function (string):
+      charAT(),slice(),split(),toSring(),toLowerCase(),toUpperCase(),DLL
+      Penulisan:
+       var nama= "Muhammad Ryan Azis";
+       console.log(nama.charAt(5));
+    -contoh built-in function (math):
+      sin(),cos().tan(),random,round(),floor(),ceil(),log(),DLL
+      Penulisan:
+        var bil= MATH.random();
+        console.log();
+  -user defined function
+    -fungsi yang kita buat sendiri
+    -menggunakan keyword function
+    -nama function (optional)
+    -parameter
+      >disimpan di dalam ()
+      >boleh ada/tidak,jika ada lebih dari satu
+      >dipisahkan oleh koma (,)
+      >function body dibungkus dengan {}
+      >dapat mengembalikan nilai (return value) atau tidak
+    -membuat user defined function
+      >dengan deklarasi/ function declaration
+        >penulisan
+        function (nama yg ingin digunakan) (a, b) {
+        var total;
+        total = a + b;
+        
+        return total;
+        }
+      >dengan ekspresi/function expression
+        >penulisan:
+        var (nama yang ingin digunakan) = function (a,b) {
+        var total;
+        total = a + b
+
+        return total:
+        }
+    -cara pemanggilan user defined function
+      >penulisan
+        alert(nama yang dimasukkan(+,+));
+
+Cara kerja Function
+  Input (masukkan bahan/material kedalam function) >>> Function (melakukan sesuatu terhadap bahan/materi) >>> Output (menghasilkan sesuatu)
+  function yg baik,hanya menjalan kan 1 arahan, 
+Spesifik Function 
+  >blok kode yang dibuat melakukan tugas yang spsifik
+  >dapat dipanggil berulang kali
+  >memudahkan penulusuran
+  >reusability
+     sumber
+    https://youtu.be/dld5ZKHYxC0
+
+Parameter Dan Argumen
+ Parameter adalah para meter yang ditulis di kurung pada saat function dibuat,digunakan untuk menampung value yang dikirimkan saat function dipanggil.
+ Argumen adalah nilai yang dikirimkan ke parameter ketika fungsi dipanggil.
+ -jika parameter lebih sedikit,maka argument kelebihannya akan diabaikan.
+   penulisan
+   function (nama yg ingin dimasukkan) (a,b){
+   return a+b;
+   }
+   var coba = (nama yg ingin dimasukkan ) (,  ,) [nilai yg terkahir akan diabaikan]
+
+ -jika parameter lebih banyak dari argument,maka kelebihan parameter akan diisi dengan nilai undefined
+    penulisan
+   function (nama yg ingin dimasukkan) (a,b,c) [nilai paramter c adalah undefined]
+   return a+b;
+   }
+   var coba = (nama yg ingin dimasukkan ) ( , ) 
+  
+  apapun itu yang keluar dari parameter ataupun argument nya akan di tampung di argumntS
+    sumber
+  https://youtu.be/MIn5CZhFqKo
+
+Refactoring
+  sebuah proses mengubah kode agar menjadi lebih baik tanpa mengubah fungsionalitasnya
+   nilai plus: 
+    -readebility (kemudahan dalam membaca kode program);
+    -DRY (dont Repeat Yourself)
+    -testability (penulisan kode)
+    -performance (penulisan kode yang tepat untuk menulis sebuah program)
+    -maintainability ( untuk pengelolaan atau pengembangan)
+      penulisan:
+                AWAL  
+    function (nama yang ingin dimasukan) (a,b) {
+    var volumeA;
+    var volumeB;
+    var total 
+
+    volumeA=a*a*a;
+    var volumeB=b*b*b;
+
+    total=valomeA+volumeB
+
+    return total;  
+    }
+                MENJADI 
+    function (nama yang ingin dimasukan) (a,b) {
+      return=a*a*a + b*b*b;
+
+Scope/lingkup variabel
+  bagaimana sebuah variabel dapat diakses dalam program 
+    sumber
+  https://youtu.be/a3CWDShrh0s?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w
+  https://codekey.id/javascript/scope-in-javascript/#google_vignette
+  https://www.w3schools.com/js/js_scope.asp
+
+Rekursif
+  sebuah fungsi yang memanggil dirinya sendiri 
+    Input> Function (di dalamnya terdapat kode yang memanggil dirinya sendiri sampi mendapatkan sebuah nilai)> outpout.
+    contoh rekursif yang yang terus menerus/rekursif 
+     function (nama yang anda masukkan) (n) {
+      console.log(n);
+      return (nama yang anda masukkan) (n-1);
+      }
+      (nama yang anda masukkan) (10);
+    cara mengatasi rekursif forever dengan 
+    semua looping bisa dibuat rekursif,tapi tidak sebaliknya
+
+Base Case
+  kondisi akhir dari rekursif yang menghasilkan nilai
+    penulisan 
+    function (nama yang anda masukkan) (n) {
+      if( n===0) return;
+      console.log(n);
+      return (nama yang anda masukkan) (n-1);
+      }
+      (nama yang anda masukkan) (10);
+  
+  implementasi rekursif
+     >menggantikan looping
+     >Fibonacci
+     >pencarian dan penenlusuruan pada struktur data list dan tree
+     >bahasa pemrograman yang tidak memiliki pengulangan
+       >Haskell,Erlang,prolog,dll
+     >DLL.
+       sumber 
+    https://youtu.be/-JV_YbJR1GY
+
+Declaration VS Expression
+  Declaration
+    Function declaration (Parameter opt) (function body)
+      penulisan
+      function (nama yang anda masukkan1) (nama yang anda masukkan2) {
+      alert (nama yang anda masukkan1 + (nama yang anda masukkan2))
+      } 
+  Expression
+     Function declaration opt (Parameter opt) (function body)
+       penulisan
+        var (nama yang anda masukkan) = function (nama yang anda masukkan1) {
+        alert ('(nama yang anda masukkan)' + (nama yang anda masukkan1) )
+        }
+  Perbedaan
+    Declaration
+      >Lebih Fleksibel (dapat ditulis dimanapun )
+        >karena konseo hoisting
+      >mudah dipahami pemula
+    Expression
+       >harus didefinisikan terlebihb dahulu sebelum dipangil
+       >Lebih powerfull
+        >sebagai closure
+        >sebagai argumen untuk function lain
+        >IIFE (immediately Invoked Function Expression)
+      sumber
+      https://youtu.be/3-Grei4X2NI
+      https://www.w3schools.com/js/js_hoisting.asp
+        }
+  
+{
+ARRAY{
+tipe data yang digunakan untuk mendeskripsikan kumpulan elemen (nilai atau variabel),
+  yang tiap" elemennya memiliki index (ARRAY ADALAH VARIABEL YANG LEBIH SAKTI)
+
+
+  Fungsi yang menonjol
+  >mempermudah pengelolaan nilai/value/data (penelusuran dan pencarian)
+  >manajemen memori
+
+  karakteristik array
+  >Variabel jamak,yg punya banyak elemen dan diacu dengan nama yg sama
+  >Kumpulan pasangan key dan nilai (key and value pair)
+  >key adalah index pada array dengan tipe integer yang dimulai dari 0
+  >array pada JS bertipe object
+  >array pada JS memiliki fungsi/method length untuk menghitung jumlah elemen di dalamnya
+  >elemen pada array boleh memiliki tipe data yang berbeda
+  >integer selalu dimulai dengan 0
+
+  Manipulasi Array
+  >Menambah Elemen Pada Array
+  >Menghapus Elemen Pada Array
+  >Menampilkan Seluruh isi Array
+
+  Method Pada Array
+  >length(mengetahui elemen pada array)
+  >join(menggabungkan seluruh isi array dan mengubahnya menjadi string)
+  >push(menambah menambah elemen array di akhir array dan bisa langsung banyak )
+  >pop(menghilangkan elemen terakhir pada array hanya dapat satu persatu)
+  >shift(menghilangkan elemen pertama array)
+  >unshift(menambah elemen pertama array)
+  >slice(mengiris array untuk menjadi array yang baru)
+  >splice(menyambung menambal pada array)
+  >ForEach(membuat array menjadi lebih sederhana)
+  >map(mengembalikan array)
+  >sort(mengurutkan index sesuai dengan perintah array)
+  >filter(mencari BANYAK nilai pada array dan mengembalikan dalam bentuk array)
+  >find(mencari SATU nilai pada array dan mengembalikan dalam bentuk array)
+  >
+    sumber
+  https://youtu.be/CW5pfpafgDE?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w (intro)
+  https://youtu.be/pDSz3sWnPRw?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w (manipulasi)
+  https://youtu.be/9aMb10KJhsk?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w (slice and splice)
+  https://youtu.be/PUiEP7PBfh0?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w (forEach dan map)
+  https://youtu.be/5leAoG35T14?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w (filter and find)
+
+  COBA PEMAHAMAN
+   https://youtu.be/mgRpWhNNGZo?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w (pt.1)
+   https://youtu.be/5v9WiGqfdWE?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w  (pt.2)
+}
+
+OBJECT {
+Kumpulam nilai yang memiliki nama/object adalah array yg lebih sakti
+object dapat meringkas banyak index/fuction/array menjadi properti
+
+Cara membuat Object
+ >Object literal (menggunakan return)
+ >fuction declaration (menggunakan return)
+ >constructor fuction (keyword new)
+ >object.create ()
+
+THIS 
+sama dengan constructor fuction (keyword new)dan tidak perlu return.
+bersifat global 
+
+  sumber
+ https://youtu.be/RKsapPaUgww?list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w (intro)
+ https://youtu.be/bUZKDBgJFIM (membuat object)
+ https://youtu.be/5cGPf1sdTvw (this)
+ 
+}
+ -->

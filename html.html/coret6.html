@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .kotak{
+        width: 100px;
+        height:100px;
+        background-color: blue;
+       }
+       .box:hover .kotak{
+        animation: berjalan 4s infinite;
+
+       }
+       @keyframes berjalan{
+        0%{
+        width: 100px;
+        height:100px;
+        background-color: blue;
+        }
+        50%{
+          transform: rotate(360deg);
+          background-color: red;
+          margin-top: 25%;
+        }
+        100%{
+         transform: rotate(780deg);
+         background-color: coral;
+         margin-left: 30%;
+
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div class="kotak"></div>
+</div>
+</body>
+</html>
