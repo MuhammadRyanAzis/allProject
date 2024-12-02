@@ -1,0 +1,267 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Tugas Kelompok 6</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        .slide-in {
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        .delay-1 { animation-delay: 0.5s; }
+        .delay-2 { animation-delay: 1s; }
+        .delay-3 { animation-delay: 1.5s; }
+        .delay-4 { animation-delay: 2s; }
+        .delay-5 { animation-delay: 2.5s; }
+
+        .bouncing-ball {
+            width: 20px;
+            height: 20px;
+            background-color: #66a6ff;
+            border-radius: 50%;
+            position: relative;
+            top: 20px;
+            animation: bounce 1.5s infinite ease-in-out;
+            margin: 20px auto;
+        }
+
+        .nav-button {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin-top: 1em;
+            color: #fff;
+            background-color: #66a6ff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #89f7fe;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center min-h-screen">
+    <div class="slide bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full text-center slide-in" id="introduction">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Kelompok 6</h1>
+        <h2 class="text-2xl font-semibold text-gray-600 mb-6 fade-in">Mekanika Klasik</h2>
+        <div class="team-container flex flex-wrap justify-around">
+            <div class="logo mb-6">
+                <img alt="Logo kelompok 6" class="rounded-full shadow-md" height="100" src="logo_kelompok.jpg" width="100"/>
+            </div>
+            <div class="team-member fade-in">
+                <img alt="Mochamad Deksa Putra Pratama" class="rounded-full shadow-md" height="100" src="X RPL 1_23_Mochamad Deksa Putra Pratama.jpg" width="100"/>
+                <p class="mt-2 font-semibold">M. Deksa P.P</p>
+                <p class="text-sm text-gray-500 content-text">Presentator Dan Pembuat Alat</p>
+            </div>
+            <div class="team-member fade-in delay-1">
+                <img alt="Muhammad Ryan Azis" class="rounded-full shadow-md" height="100" src="X RPL 1_29_Muhammad Ryan Azis.jpg" width="100"/>
+                <p class="mt-2 font-semibold">M. Ryan Azis</p>
+                <p class="text-sm text-gray-500 content-text">Pembuat Web Dan Pembuat Alat</p>
+            </div>
+            <div class="team-member fade-in delay-2">
+                <img alt="Tomi Firdaus" class="rounded-full shadow-md" height="100" src="X RPL 1_34_Tomi Firdaus.jpg" width="100"/>
+                <p class="mt-2 font-semibold">Tomi Firdaus</p>
+                <p class="text-sm text-gray-500 mr-4 content-text">Dokumentasi Dan Pembuat Alat</p>
+            </div>
+            <div class="team-member fade-in delay-3">
+                <img alt="Avis Zola Raditya Kurniawan" class="rounded-full shadow-md" height="100" src="X RPL 1_08_Avis Zola Raditya Kurniawan.jpg" width="100"/>
+                <p class="mt-2 font-semibold">Avis Zola R.K</p>
+                <p class="text-sm text-gray-500 content-text">Pembuat Alat Dan Pembeli Bahan</p>
+            </div>
+            <div class="team-member fade-in delay-4">
+                <img alt="Adhiana Alika Apriantina" class="rounded-full shadow-md" height="100" src="X RPL 1_05_Adhiana Alika Apriantina.jpg" width="100"/>
+                <p class="mt-2 font-semibold">Adhiana Alika Apriantina</p>
+                <p class="text-sm text-gray-500 content-text">Pembuat Alat Dan Pencari Materi</p>
+            </div>
+            <div class="team-member fade-in delay-5">
+                <img alt="Kheisya Grace Manda" class="rounded-full shadow-md" height="100" src="X RPL 1_19_Kheisya Grace Manda.jpg" width="100"/>
+                <p class="mt-2 font-semibold">Kheisya Grace Manda</p>
+                <p class="text-sm text-gray-500 margin-bottom content-text">Presentator Dan Pembuat Alat</p>
+            </div>
+        </div>
+        <button class="nav-button" onclick="showSlide('content1')">Next ></button>
+    </div>
+    <div class="slide bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full text-center slide-in" id="content1">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Materi</h1>
+        <p class="content-text text-gray-600 fade-in">
+            <h3><b>Tujuan</b></h3>
+            mengubah <b>energi mekanis</b> menjadi <b>energi listrik</b>, yang kemudian digunakan untuk menyalakan lampu. <br> 
+            <h3><b>Teori</b></h3>
+            Berikut penjelasan teori-teori mengenai proyek generator dengan lampu yang menggunakan roda dan dinamo: <br>
+            <ul class="list-disc list-inside text-left">
+                
+                <h3><b>1. Teori Hubungan Antar Roda, Kecepatan, dan Energi Kinetik</b></h3> <br>
+                
+                - <b>Roda dan Hubungannya dengan Dinamo</b><br>
+                  Ketika roda diputar, energi mekanis dari putaran tersebut diteruskan ke dinamo melalui penghubung (karet atau sabuk). Hubungan ini mirip dengan mekanisme kerja pada sistem katrol atau pulley. Kecepatan putaran roda utama memengaruhi kecepatan putaran dinamo. Jika perbandingan diameter roda utama dengan roda dinamo berbeda, terjadi perubahan kecepatan putar (transmisi). <br>
+                  <b>Contoh:</b><br>
+                      Jika roda utama lebih besar daripada roda dinamo, maka dinamo akan berputar lebih cepat. 
+                      Sebaliknya, jika roda utama lebih kecil, dinamo akan berputar lebih lambat. <br>
+                - <b>Kecepatan Putar (RPM – Revolutions Per Minute)</b> <br>
+                  Kecepatan roda dihitung berdasarkan jumlah putaran per menit. Hubungan ini dapat dijelaskan dengan rumus:  <br>
+                  V = r \cdot \omega <br>
+                  Di mana:  <br>
+                  - V adalah kecepatan linier (m/s)  <br>
+                  - r adalah jari-jari roda (m)  <br>
+                  - omega adalah kecepatan sudut (rad/s) <br>
+                
+                - <b>Energi Kinetik pada Roda</b> <br>
+                  Energi kinetik adalah energi yang dimiliki benda bergerak. Pada roda yang berputar, energi kinetiknya dirumuskan:  <br>
+                  E_k = \frac{1}{2} I \omega^2 <br>
+                  Di mana:  <br>
+                  <ul>
+                     <li>- E_k adalah energi kinetik (Joule)</li>
+                     <li>- I adalah momen inersia roda (\(I = \frac{1}{2}mr^2\) untuk roda silinder) </li>
+                     <li>- omega adalah kecepatan sudut (rad/s)</li>
+                  </ul>
+                
+                  Energi kinetik roda ini dikonversi menjadi energi mekanis yang memutar dinamo. <br> <br>
+
+                <h3><b>2. Prinsip Kerja Dinamo Sehingga Menghasilkan Cahaya</b></h3> <br>
+                
+                - <b>Cara Kerja Dinamo</b> <br>
+                  Dinamo bekerja berdasarkan prinsip <b>induksi elektromagnetik</b>. Ketika kumparan kawat di dalam dinamo berputar di dalam medan magnet, terjadi perubahan fluks magnetik yang memotong kawat. Perubahan ini menghasilkan arus listrik sesuai hukum Faraday:  <br>
+                  text{GGL (Gaya Gerak Listrik)} = -N \frac{d\Phi}{dt} <br>
+                  Di mana:  <br>
+                  - N adalah jumlah lilitan kawat   <br>
+                  - Phi adalah fluks magnetik  <br>
+                  Kecepatan putaran dinamo sangat memengaruhi besar tegangan listrik yang dihasilkan. Semakin cepat dinamo berputar, semakin besar tegangan listriknya. <br>
+                - <b>Menghasilkan Cahaya</b> <br>
+                  Arus listrik yang dihasilkan dinamo disalurkan ke lampu. Lampu (misalnya lampu LED) akan menyala ketika tegangan dan arus yang dihasilkan dinamo cukup untuk memenuhi kebutuhan energi listrik lampu. <br> <br>
+
+                <h3><b>3. Penjelasan Bagian Dinamo</b></h3> <br>
+                
+                Dinamo terdiri dari beberapa komponen utama: <br>
+                - <b>Rotor (Bagian yang Berputar)</b> <br>
+                  Rotor adalah kumparan kawat yang dipasang pada poros. Ketika poros dinamo diputar (melalui sabuk penghubung dari roda), rotor menghasilkan perubahan fluks magnetik. <br>
+                - <b>Stator (Bagian Diam)</b> <br>
+                  Stator adalah magnet permanen atau elektromagnet yang menghasilkan medan magnet tetap. Rotor bergerak di dalam medan magnet ini. <br>
+                  - <b>Kumparan Kawat</b> <br>
+                  Kumparan kawat menjadi tempat induksi elektromagnetik terjadi. Semakin banyak jumlah lilitan kawat, semakin besar tegangan yang dihasilkan. <br>
+                - <b>Poros dan Bantalan</b> <br>
+                  Poros dinamo menghubungkan dinamo dengan roda penggerak, memungkinkan energi mekanis diubah menjadi energi listrik. <br> <br>
+
+                <h3><b>4. Penyesuaian dan Optimasi Proyek</b></h3> <br>
+                
+                Untuk memastikan proyek ini berhasil: <br>
+                1. <b>Pastikan roda besar memiliki permukaan kasar</b> agar karet penghubung tidak selip saat roda diputar. <br>
+                2. <b>Pilih dinamo dengan efisiensi tinggi</b>, seperti dinamo sepeda, karena mampu menghasilkan arus cukup meski dengan putaran kecil. <br>
+                3. <b>Gunakan lampu LED</b> yang membutuhkan daya rendah sehingga cahaya tetap optimal meskipun dinamo menghasilkan arus kecil. <br>
+                4. <b>Tambahkan kapasitor atau baterai kecil</b> untuk menyimpan energi sementara, sehingga lampu tetap menyala saat roda berhenti sejenak. <br>
+
+                Penjelasan ini mencakup prinsip kerja roda, dinamo, dan hubungan energi mekanis dengan energi listrik. <br> <br>
+            </ul>
+            <b>Alat dan Bahan:</b>
+            <div class="flex flex-wrap justify-center mt-4">
+                <div class="m-2 text-center">
+                    <img alt="DC Motor" class="m-2" height="100" src="DC_Motor.webp" width="100"/>
+                    <p><b>DC Motor</b></p>
+                </div>
+                <div class="m-2 text-center">
+                    <img alt="Karet" class="m-2" height="100" src="karet.jpeg" width="100"/>
+                    <p><b>Karet</b></p>
+                </div>
+                <div class="m-2 text-center">
+                    <img alt="Kawat" class="m-2" height="100" src="kawat.jpg" width="100"/>
+                    <p><b>Kawat</b></p>
+                </div>
+                <div class="m-2 text-center">
+                    <img alt="LED Light" class="m-2" height="100" src="LED.jpeg" width="100"/>
+                    <p><b>LED Light</b></p>
+                </div>
+                <div class="m-2 text-center">
+                    <img alt="Lem Tembak" class="m-2" height="100" src="Lem_Tembak.jpg" width="100"/>
+                    <p><b>Lem Tembak</b></p>
+                </div>
+                <div class="m-2 text-center">
+                    <img alt="Spidol Biasa" class="m-2" height="100" src="spidol_b.jpg" width="100"/>
+                    <p><b>Spidol Biasa</b></p>
+                </div>
+                <div class="m-2 text-center">
+                    <img alt="Spidol Marker" class="m-2" height="100" src="spidol_M.jpeg" width="100"/>
+                    <p><b>Spidol Marker</b></p>
+                </div>
+                <div class="m-2 text-center">
+                    <img alt="Tutup Botol" class="m-2" height="100" src="tutup_botol.jpg" width="100"/>
+                    <p><b>Tutup Botol</b></p>
+                </div>
+                <div class="m-2 text-center">
+                    <img alt="Stik Kayu" class="m-2" height="100" src="Stik.jpg" width="100"/>
+                    <p><b>Stik Kayu</b></p>
+                </div>
+            </div>
+        </p>
+        <div class="bouncing-ball"></div>
+        <button class="nav-button" onclick="showSlide('content2')">Next</button>
+    </div>
+    <div class="slide bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full text-center slide-in" id="content2">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4 fade-in">NAYHIANMI</h1>
+        <p class="content-text text-gray-600 fade-in">
+            <b>Dokumentasi</b><br/>
+            <img alt="Persiapan" class="m-2" height="250" src="persiapan.jpg" width="250"/><br/>  <video class="m-2" controls="" src="videoRecap.mp4" width="250px" height="250px"></video><br/>
+            <video class="m-2" controls="" src="pengerjaan1.mp4" width="250px" height="250px"></video><br/>  <img alt="Pengerjaan 2" class="m-2" height="100" src="pengerjaan2.jpg" width="250"/><br/><br/>
+            <b>Jadwal Kegiatan</b><br/>
+            <img src="jadwal.jpg" alt="jadwal" class="m-5" width="500px" height="500px"/>
+            
+            <h3><b>Kesimpulan</b></h3>
+              Proyek ini berhasil memanfaatkan prinsip <b>induksi elektromagnetik</b> untuk menghasilkan cahaya dengan mengonversi energi mekanis dari roda menjadi energi listrik melalui dinamo. Hubungan antara roda, dinamo, dan lampu melibatkan beberapa konsep kunci:  <br>
+
+            <b>1. Energi Kinetik dari Roda</b>: Energi mekanis yang dihasilkan oleh roda diputar oleh pengguna diteruskan ke poros dinamo melalui sabuk atau karet penghubung. Perputaran roda mengatur kecepatan putar dinamo, sehingga memengaruhi besar arus listrik yang dihasilkan.  <br>
+            <b>2. Prinsip Induksi Elektromagnetik</b>: Ketika rotor (kumparan kawat) dalam dinamo berputar di medan magnet stator, terjadi perubahan fluks magnetik yang menghasilkan gaya gerak listrik (GGL). Arus listrik ini dihasilkan sesuai hukum Faraday.  <br>
+            <b>3. Cahaya dari Energi Listrik</b>: Arus listrik yang dihasilkan dinamo dialirkan ke lampu. Lampu mengubah energi listrik menjadi cahaya, di mana lampu LED lebih efisien karena hanya membutuhkan daya kecil untuk menyala terang.  <br>
+            <b>4. Faktor Keberhasilan:</b><br>
+            - Kecepatan putar roda yang stabil.  <br>
+            - Dinamo dengan spesifikasi sesuai (efisien pada kecepatan rendah).  <br>
+            - Pemilihan jenis lampu yang sesuai dengan arus listrik yang dihasilkan. <br> 
+
+            Dengan desain yang optimal dan pemilihan material yang tepat, sistem ini menjadi solusi sederhana dan efisien untuk menghasilkan cahaya menggunakan energi mekanis, serta mendemonstrasikan konversi energi dari mekanis ke listrik hingga optik. <br>
+            </p>
+        <div class="bouncing-ball"></div>
+        <button class="nav-button" onclick="showSlide('closing')">Next</button>
+    </div>
+    <div class="slide bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full text-center slide-in" id="closing">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Terima Kasih atas perhatiannya</h1>
+        <p class="content-text text-gray-600 fade-in">
+            Malam hari lihat bintang,<br>
+            Bersinar terang di angkasa.<br>
+            Semoga nilai terus gemilang,<br>
+            Jadi kebanggaan kita semua.
+        </p>
+        <button class="nav-button" onclick="showSlide('introduction')">Back to Start</button>
+    </div>
+    <script>
+        function showSlide(slideId) {
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.style.display = 'none';
+            });
+            document.getElementById(slideId).style.display = 'block';
+        }
+
+        showSlide('introduction');
+    </script>
+</body>
+</html>
