@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "sulit3",
+            "request": "launch",
+            "mainClass": "sulit3",
+            "projectName": "belajar coding_74ef28c1"
+        },
+        {
+            "type": "java",
+            "name": "sulit2",
+            "request": "launch",
+            "mainClass": "sulit2",
+            "projectName": "belajar coding_74ef28c1"
+        },
+        {
+            "type": "java",
+            "name": "sulit1",
+            "request": "launch",
+            "mainClass": "sulit1",
+            "projectName": "belajar coding_74ef28c1"
+        },
+        {
+            "type": "java",
+            "name": "sedang3",
+            "request": "launch",
+            "mainClass": "sedang3",
+            "projectName": "belajar coding_74ef28c1"
+        },
+        {
+            "type": "java",
+            "name": "sedang2",
+            "request": "launch",
+            "mainClass": "sedang2",
+            "projectName": "belajar coding_74ef28c1"
+        },
+        {
+            "type": "java",
+            "name": "sedang1",
+            "request": "launch",
+            "mainClass": "sedang1",
+            "projectName": "belajar coding_74ef28c1"
+        },
+        {
+            "type": "java",
             "name": "sederhana3",
             "request": "launch",
             "mainClass": "sederhana3",
